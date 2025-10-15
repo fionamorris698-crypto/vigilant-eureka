@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://dashboard-ntwx14wlo.losangelesits.com/:path",
+      "permanent": true
+    }
+  ]
+}
