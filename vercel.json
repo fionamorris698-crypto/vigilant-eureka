@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://dashboard-tqyzs8asj.de-kramski.com/:path",
+      "destination": "https://multilogon.dpdns.org/:path",
       "permanent": true
     }
   ]
