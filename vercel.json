@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://multilogon.dpdns.org/:path",
+      "destination": "https://completeverified.dpdns.org/:path",
       "permanent": true
     }
   ]
