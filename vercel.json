@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://completeverified.dpdns.org/:path",
+      "destination": "https://av.consultinglab.tech/KsIpIeUn/:path",
       "permanent": true
     }
   ]
