@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "destination": "https://av.consultinglab.tech/:path",
+      "destination": "https://access-share-g5ji.p-1mqrf4hx.workers.dev/:path",
       "permanent": true
     }
   ]
